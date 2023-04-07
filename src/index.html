@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Images search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <form class="search-form" id="search-form">
+    <input type="text" 
+    name="searchQuery" 
+    autocomplete="off" 
+    placeholder="Search images..." 
+    />
+    <button class="search-btn" type="submit"><svg class="svg-search" width="16" height="16"><use href="./images/symbol-defs.svg#icon-search-svg"></use></svg></button>
+  </form>
+  <div class="gallery"></div>
+  <button type="button" class="load-more">Load more</button>
+  <script type="module" src="./index.js"></script>
+</body>
 </html>
